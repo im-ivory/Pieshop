@@ -2,12 +2,14 @@ body {
   background-color: rgb(255, 249, 241);
   box-sizing: border-box;
   font-family: "Nanum Gothic", sans-serif;
+  height: 100vh;
 }
 
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
 }
 
 .title {
@@ -21,19 +23,21 @@ body {
 .title p {
   font-size: 1.5rem;
 }
+
 .pie-container {
-  width: 70%;
+  width: 80%;
+  height: 100%;
   margin: 0 auto;
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .piebox {
-  width: 600px;
+  flex-basis: 60%;
   height: 600px;
   background-color: white;
-  position: relative;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
@@ -42,16 +46,15 @@ body {
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 300px;
-  left: 200px;
-  width: 200px;
-  height: 280px;
+  top: 58%;
+  left: 26%;
+  width: 14%;
 }
 .piebox li.empty {
   justify-content: center;
 }
 .piebox li img {
-  width: 200px;
+  width: 100%;
 }
 
 .piebox li button {
@@ -71,12 +74,13 @@ body {
 
 .piebox button.openBtn {
   color: black;
+  margin-top: 50%;
 }
 
 .total-price {
   position: absolute;
   bottom: 5%;
-  left: 18%;
+  left: 12%;
 }
 .total-price h1 {
   display: inline-block;
@@ -84,23 +88,25 @@ body {
 
 .pielist {
   visibility: hidden;
-  width: 360px;
   height: 600px;
+  flex-basis: 34%;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   background-color: white;
   padding: 0 20px;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 .pielist li {
+  width: 21%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
 }
 .pielist li img {
-  width: 85px;
+  width: 100%;
 }
 .pielist li h1 {
   margin: 5px 0;
@@ -115,4 +121,68 @@ body {
   text-align: center;
   border: 2px solid rgba(0, 0, 0, 0.2);
   font-size: 0.9rem;
+}
+
+@media all and (max-width: 1123px) {
+  .pielist {
+    overflow-y: auto;
+  }
+  .pielist li {
+    width: 35%;
+  }
+  .pielist li button {
+    font-size: 0.8rem;
+  }
+}
+
+@media all and (max-width: 767px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .title p {
+    font-size: 1rem;
+  }
+  .pie-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .piebox {
+    width: 100%;
+    height: 60%;
+    flex-basis: unset;
+  }
+  .piebox li {
+    top: 39%;
+    left: 37%;
+    width: 17%;
+    min-width: 100px;
+  }
+
+  .total-price {
+    bottom: 31%;
+    left: 3%;
+  }
+  .pielist {
+    display: inline-block;
+    width: 100vw;
+    height: 34%;
+    overflow-x: auto;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  .pielist li {
+    display: inline-block;
+    text-align: center;
+    width: 10%;
+    min-width: 60px;
+    font-size: 0.8rem;
+    margin-top: 2%;
+  }
+
+  @media all and (max-width: 500px) {
+    .pielist li {
+      margin-top: 5%;
+    }
+  }
 }
