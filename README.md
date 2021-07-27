@@ -10,3 +10,7 @@ X 버튼을 누르면 고를 수 있는 파이들의 목록이 뜹니다. <br/>
 
 - 모든 일러스트는 직접 그린 것입니다.
 - 반응형 페이지입니다.
+
+https://im-ivory.github.io/Pieshop/
+
+![화면 캡처 2021-07-27 184801](https://user-images.githubusercontent.com/78600276/127134340-a25fbfcc-6ec0-433f-883e-790bd7d80daf.png)
